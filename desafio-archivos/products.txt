@@ -1,1 +1,1 @@
-[]
+[{"title":"Sapiens","price":"$30","thumbnail":"https://upload.wikimedia.org/wikipedia/commons/1/1f/Sapiens-uma-breve-historia-da-humanidade-livro-yuval-harari-320001-MLB20265211115_032015-O.jpg","id":1},{"title":"Homo Deus","price":"$30","thumbnail":"https://images-na.ssl-images-amazon.com/images/I/71E+pflcJrL.jpg","id":2},{"title":"Guía del autoestopista galáctico","price":"$20","thumbnail":"https://www.anagrama-ed.es/uploads/media/portadas/0001/24/78b2f976a71ca60a397892128ee691677b4cb2a1.jpeg","id":3}]

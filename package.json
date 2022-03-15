@@ -1,0 +1,19 @@
+{
+  "name": "backend-coder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Clases.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FerBuono/backend-coder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FerBuono/backend-coder/issues"
+  },
+  "homepage": "https://github.com/FerBuono/backend-coder#readme"
+}

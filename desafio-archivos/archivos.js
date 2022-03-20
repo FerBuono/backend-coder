@@ -17,7 +17,7 @@ class Contenedor {
             const array = JSON.parse(content);
 
             const products = [...array, product];
-            products.forEach((product, index) => product.id = (index + 1));
+            products[products.length - 1].id = products.length;
 
             await fs.promises.writeFile(this.file, JSON.stringify(products));
         } catch (error) {

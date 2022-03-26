@@ -4,7 +4,10 @@
   "description": "",
   "main": "Clases.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "desafioClases": "node desafio-clases/clases.js",
+    "desafioArchivos": "node desafio-archivos/archivos.js",
+    "desafioServidorExpress": "node desafio-servidor-express/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/FerBuono/backend-coder/issues"
   },
-  "homepage": "https://github.com/FerBuono/backend-coder#readme"
+  "homepage": "https://github.com/FerBuono/backend-coder#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }

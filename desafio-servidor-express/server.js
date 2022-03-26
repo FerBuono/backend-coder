@@ -4,7 +4,7 @@ const app = express();
 
 // Contenedor de productos
 const Contenedor = require('./contenedor');
-const prods = new Contenedor('./productos.txt');
+const prods = new Contenedor('./desafio-servidor-express/productos.txt');
 
 // Rutas
 app.get('/', (req, res) => {

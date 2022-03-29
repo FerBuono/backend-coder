@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "desafioClases": "node desafio-clases/clases.js",
     "desafioArchivos": "node desafio-archivos/archivos.js",
-    "desafioServidorExpress": "node desafio-servidor-express/server.js"
+    "desafioServidorExpress": "node desafio-servidor-express/server.js",
+    "desafioApiRestful": "node desafio-api-restful/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/FerBuono/backend-coder#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "multer": "^1.4.4"
   }
 }

@@ -20,3 +20,20 @@ npm run desafioServidorExpress
 npm run desafioApiRestful
 ~~~
 
+## Desafío Motores de plantillas
+
+### Handlebars
+~~~
+npm run desafioMotoresHbs
+~~~
+
+### Pug
+~~~
+npm run desafioMotoresPug
+~~~
+
+### EJS
+~~~
+npm run desafioMotoresEjs
+~~~
+

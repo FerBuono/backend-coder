@@ -5,13 +5,13 @@
   "main": "Clases.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "desafioClases": "nodemon desafio-clases/clases.js",
-    "desafioArchivos": "nodemon desafio-archivos/archivos.js",
-    "desafioServidorExpress": "nodemon desafio-servidor-express/server.js",
-    "desafioApiRestful": "nodemon desafio-api-restful/server.js",
-    "desafioMotoresHbs": "nodemon desafio-motores/server-hbs.js",
-    "desafioMotoresPug": "nodemon desafio-motores/server-pug.js",
-    "desafioMotoresEjs": "nodemon desafio-motores/server-ejs.js"
+    "desafioClases": "noded desafio-clases/clases.js",
+    "desafioArchivos": "noded desafio-archivos/archivos.js",
+    "desafioServidorExpress": "noded desafio-servidor-express/server.js",
+    "desafioApiRestful": "noded desafio-api-restful/server.js",
+    "desafioMotoresHbs": "noded desafio-motores/server-hbs.js",
+    "desafioMotoresPug": "noded desafio-motores/server-pug.js",
+    "desafioMotoresEjs": "noded desafio-motores/server-ejs.js"
   },
   "repository": {
     "type": "git",

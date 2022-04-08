@@ -1,24 +1,28 @@
 <div class="container table-container">
     <h1 class="title">Productos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Imágen</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each productos}} 
+    {{#each productos}}
+        <table>
+            <thead>
                 <tr>
-                    <td>{{id}}</td>
-                    <td>{{title}}</td>
-                    <td>{{price}}</td>
-                    <td><img src="{{thumbnail}}" alt="{{title}}"/></td>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Imágen</th>
                 </tr>
-            {{/each}}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {{#each productos}} 
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{title}}</td>
+                        <td>{{price}}</td>
+                        <td><img src="{{thumbnail}}" alt="{{title}}"/></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <h2>No se encontraron productos</h2>
+    {{/each}}
 </div>
 <button class="btn btn-sec"><a href="/">Cargar más productos</a></button>

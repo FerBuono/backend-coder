@@ -5,27 +5,31 @@
 </head>
 <body>
     <div class="container table-container">
-        <h1 class="title">Peliculas</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Imágen</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% productos.forEach((producto)=> { %>
+        <h1 class="title">Productos</h1>
+        <% if(productos.length == 0) { %>
+            <h2>No se encontraron productos</h2>
+        <% } else { %>
+            <table>
+                <thead>
                     <tr>
-                        <td><%= producto.id %></td>
-                        <td><%= producto.title %></td>
-                        <td><%= producto.price %></td>
-                        <td><img src=<%=prod.thumbail %> alt=<%= prod.title %> /></td>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Imágen</th>
                     </tr>
-                <% }) %>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <% productos.forEach((producto)=> { %>
+                        <tr>
+                            <td><%= producto.id %></td>
+                            <td><%= producto.title %></td>
+                            <td><%= producto.price %></td>
+                            <td><img src=<%=prod.thumbail %> alt=<%= prod.title %> /></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } %>
     </div>
     <button class="btn btn-sec"><a href="/">Cargar más productos</a></button>
 </body>

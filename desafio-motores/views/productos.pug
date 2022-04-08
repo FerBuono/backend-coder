@@ -5,20 +5,23 @@ html
     body 
         div(class="container table-container")
             h1(class="title")="Productos"
-            table
-                thead 
-                    tr 
-                        th='ID'
-                        th='Producto'
-                        th='Precio'
-                tbody
-                each producto in productos
-                    tr
-                        td=producto.id
-                        td=producto.title
-                        td=producto.price
-                        td
-                            img.image(src=producto.thumbnail, alt=producto.title)
+            if productos.length == 0
+                h2="No se encontraron productos"
+            else
+                table
+                    thead 
+                        tr 
+                            th='ID'
+                            th='Producto'
+                            th='Precio'
+                    tbody
+                    each producto in productos
+                        tr
+                            td=producto.id
+                            td=producto.title
+                            td=producto.price
+                            td
+                                img.image(src=producto.thumbnail, alt=producto.title)
         button(class="btn btn-sec")
             a(href='/')='Cargar más productos'
                

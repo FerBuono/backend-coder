@@ -1,0 +1,3 @@
+Encuentro a ejs mucho más sencillo dado que es html plano mezclado con js, simil jsx, por lo que no hay que perder tiempo aprendiendo o adaptando la sintáxis, como por ejemplo ocurre con pug.
+Pug puede ser una buena opción dado que acorta bastante el código a escribir, pero la sintáxis de los condicionales o ciclos no es exactamente igual a js, lo que puede ser un problema.
+A handlebars no le encuentro lo positivo existiendo ejs. Es escribir la misma cantidad de código pero además es tedioso a la hora de agregar js.

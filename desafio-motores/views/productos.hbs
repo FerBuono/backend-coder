@@ -1,13 +1,13 @@
 <div class="container table-container">
     <h1 class="title">Productos</h1>
-    {{#each productos}}
+    {{#if productos.length}}
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Producto</th>
                     <th>Precio</th>
-                    <th>Imágen</th>
+                    <th>Imagen</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +23,6 @@
         </table>
     {{else}}
         <h2>No se encontraron productos</h2>
-    {{/each}}
+    {{/if}}
 </div>
 <button class="btn btn-sec"><a href="/">Cargar más productos</a></button>

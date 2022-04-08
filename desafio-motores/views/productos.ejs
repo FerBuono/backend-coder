@@ -15,7 +15,7 @@
                         <th>ID</th>
                         <th>Producto</th>
                         <th>Precio</th>
-                        <th>Imágen</th>
+                        <th>Imagen</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,7 +24,7 @@
                             <td><%= producto.id %></td>
                             <td><%= producto.title %></td>
                             <td><%= producto.price %></td>
-                            <td><img src=<%=prod.thumbail %> alt=<%= prod.title %> /></td>
+                            <td><img src="<%=producto.thumbnail %>" alt=<%= producto.title %> /></td>
                         </tr>
                     <% }) %>
                 </tbody>

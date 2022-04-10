@@ -20,7 +20,7 @@ router.get('/:id', async(req, res) => {
 });
 
 router.post('/', async(req, res) => {
-    const newProduct = await products.addProduct(req.body);
+    await products.addProduct(req.body);
     res.redirect('/');
 });
 

@@ -5,14 +5,15 @@
   "main": "Clases.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "desafioClases": "node desafio-clases/clases.js",
-    "desafioArchivos": "node desafio-archivos/archivos.js",
-    "desafioServidorExpress": "node desafio-servidor-express/server.js",
-    "desafioApiRestful": "node desafio-api-restful/server.js",
-    "desafioMotoresHbs": "node desafio-motores/server-hbs.js",
-    "desafioMotoresPug": "node desafio-motores/server-pug.js",
-    "desafioMotoresEjs": "node desafio-motores/server-ejs.js",
-    "desafioWebsockets": "nodemon desafio-websockets/server.js"
+    "pruebas": "nodemon pruebas/server.js",
+    "desafioClases": "node 01-desafio-clases/clases.js",
+    "desafioArchivos": "node 02-desafio-archivos/archivos.js",
+    "desafioServidorExpress": "03-node desafio-servidor-express/server.js",
+    "desafioApiRestful": "node 04-desafio-api-restful/server.js",
+    "desafioMotoresHbs": "node 05-desafio-motores/server-hbs.js",
+    "desafioMotoresPug": "node 05-desafio-motores/server-pug.js",
+    "desafioMotoresEjs": "node 05-desafio-motores/server-ejs.js",
+    "desafioWebsockets": "node 06-desafio-websockets/server.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-handlebars": "^6.0.4",
+    "moment": "^2.29.2",
     "multer": "^1.4.4",
     "pug": "^3.0.2",
     "socket.io": "^4.4.1"

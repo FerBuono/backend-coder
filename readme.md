@@ -1,39 +1,39 @@
 # Scripts para correr cada desafío
 
-## Desafío Clases 
+## 01 - Desafío Clases 
 ~~~
 npm run desafioClases
 ~~~
 
-## Desafío Manejo de Archivos en Javascript
+## 02 - Desafío Manejo de Archivos en Javascript
 ~~~
 npm run desafioArchivos
 ~~~
 
-## Desafío Servidor con Express 
+## 03 - Desafío Servidor con Express 
 ~~~
 npm run desafioServidorExpress
 ~~~
 
-## Desafío API RESTful 
+## 04 - Desafío API RESTful 
 ~~~
 npm run desafioApiRestful
 ~~~
 
-## Desafío Motores de plantillas
+## 05 - Desafío Motores de plantillas
 
-### Handlebars
 ~~~
+- Handlebars
 npm run desafioMotoresHbs
-~~~
 
-### Pug
-~~~
+- Pug
 npm run desafioMotoresPug
-~~~
 
-### EJS
-~~~
+- EJS
 npm run desafioMotoresEjs
 ~~~
 
+## 06 - Desafío Websockets 
+~~~
+npm run desafioWebsockets
+~~~

@@ -37,3 +37,8 @@ npm run desafioMotoresEjs
 ~~~
 npm run desafioWebsockets
 ~~~
+
+## 07 - Desafío Primera Base de Datos 
+~~~
+npm run desafioBdd
+~~~

@@ -1,1 +1,0 @@
-[{"title":"Guía del autoestopista galáctico","price":"$20","thumbnail":"https://www.anagrama-ed.es/uploads/media/portadas/0001/24/78b2f976a71ca60a397892128ee691677b4cb2a1.jpeg","id":1}]

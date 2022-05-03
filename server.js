@@ -19,7 +19,7 @@ messages.dropTable();
 messages.createTable();
 
 // Directorio público
-app.use(express.static('./07-desafio-bdd/public'));
+app.use(express.static('public'));
 
 // Lectura y parseo del body
 app.use(express.json());

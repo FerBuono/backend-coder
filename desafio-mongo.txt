@@ -1,0 +1,427 @@
+C:\Users\Fernando>mongo
+MongoDB shell version v5.0.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e77e4672-4b96-4ed4-8ef3-5b22bc695b4d") }
+MongoDB server version: 5.0.8
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-05-03T14:48:03.527-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2022-05-03T14:48:03.527-03:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use ecommerce
+switched to db ecommerce
+
+--------------------------------------------------------------------------------------------------------------------------------
+1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. El formato de los documentos debe estar en correspondencia con el que venimos utilizando en el entregable con base de datos MariaDB.
+2) Definir las claves de los documentos en relación a los campos de las tablas de esa base. En el caso de los productos, poner valores al campo precio entre los 100 y 5000 pesos(eligiendo valores intermedios, ej: 120, 580, 900, 1280, 1700, 2300, 2860, 3350, 4320, 4990).
+
+> db.productos.insertMany([{"title":"Asado","price":5000,"thumbnail":"asad","id":1},{"title":"Coca","price":200,"thumbnail":"saas","id":2},{"title":"Sushi","price":2000,"thumbnail":"sdas","id":3},{"title":"Pancho","price":1000,"thumbnail":"asas","id":4},{"title":"Hamburguesa","price":1500,"thumbnail":"saas","id":5},{"title":"Sprite","price":500,"thumbnail":"saasas","id":6},{"title":"Sanguche","price":1700,"thumbnail":"assa","id":7},{"title":"Helado","price":2500,"thumbnail":"dslsd","id":8},{"title":"Nutella","price":3000,"thumbnail":"koasoi","id":9},{"title":"Brownie","price":1000,"thumbnail":"kdja","id":10}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6271a2c60e3e6ad854552cf7"),
+                ObjectId("6271a2c60e3e6ad854552cf8"),
+                ObjectId("6271a2c60e3e6ad854552cf9"),
+                ObjectId("6271a2c60e3e6ad854552cfa"),
+                ObjectId("6271a2c60e3e6ad854552cfb"),
+                ObjectId("6271a2c60e3e6ad854552cfc"),
+                ObjectId("6271a2c60e3e6ad854552cfd"),
+                ObjectId("6271a2c60e3e6ad854552cfe"),
+                ObjectId("6271a2c60e3e6ad854552cff"),
+                ObjectId("6271a2c60e3e6ad854552d00")
+        ]
+}
+> db.mensajes.insertMany([{"user":"fer@gmail.com","time":"05/03/2022 6:36:42 PM","message":"Hola"},{"user":"fer@gmail.com","time":"05/03/2022 6:36:44 PM","message":"Como va?"},{"user":"fer@gmail.com","time":"05/03/2022 6:36:50 PM","message":"Todo bien?"},{"user":"nofer@gmail.com","time":"05/03/2022 6:36:58 PM","message":"Todo bien"},{"user":"nofer@gmail.com","time":"05/03/2022 6:37:01 PM","message":"Y vos?"},{"user":"nofer@gmail.com","time":"05/03/2022 6:37:11 PM","message":"Desafio de coder"},{"user":"tampocofer@gmail.com","time":"05/03/2022 6:37:26 PM","message":"mongodb"},{"user":"tampocofer@gmail.com","time":"05/03/2022 6:37:34 PM","message":"bases"},{"user":"tampocofer@gmail.com","time":"05/03/2022 6:37:35 PM","message":"de"},{"user":"tampocofer@gmail.com","time":"05/03/2022 6:37:37 PM","message":"datos"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6271a0bd0e3e6ad854552cec"),
+                ObjectId("6271a0bd0e3e6ad854552ced"),
+                ObjectId("6271a0bd0e3e6ad854552cee"),
+                ObjectId("6271a0bd0e3e6ad854552cef"),
+                ObjectId("6271a0bd0e3e6ad854552cf0"),
+                ObjectId("6271a0bd0e3e6ad854552cf1"),
+                ObjectId("6271a0bd0e3e6ad854552cf2"),
+                ObjectId("6271a0bd0e3e6ad854552cf3"),
+                ObjectId("6271a0bd0e3e6ad854552cf4"),
+                ObjectId("6271a0bd0e3e6ad854552cf5")
+        ]
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+3) Listar todos los documentos en cada colección.
+
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf7"),
+        "title" : "Asado",
+        "price" : 5000,
+        "thumbnail" : "asad",
+        "id" : 1
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf8"),
+        "title" : "Coca",
+        "price" : 200,
+        "thumbnail" : "saas",
+        "id" : 2
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf9"),
+        "title" : "Sushi",
+        "price" : 2000,
+        "thumbnail" : "sdas",
+        "id" : 3
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfa"),
+        "title" : "Pancho",
+        "price" : 1000,
+        "thumbnail" : "asas",
+        "id" : 4
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfb"),
+        "title" : "Hamburguesa",
+        "price" : 1500,
+        "thumbnail" : "saas",
+        "id" : 5
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfc"),
+        "title" : "Sprite",
+        "price" : 500,
+        "thumbnail" : "saasas",
+        "id" : 6
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfd"),
+        "title" : "Sanguche",
+        "price" : 1700,
+        "thumbnail" : "assa",
+        "id" : 7
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfe"),
+        "title" : "Helado",
+        "price" : 2500,
+        "thumbnail" : "dslsd",
+        "id" : 8
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cff"),
+        "title" : "Nutella",
+        "price" : 3000,
+        "thumbnail" : "koasoi",
+        "id" : 9
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552d00"),
+        "title" : "Brownie",
+        "price" : 1000,
+        "thumbnail" : "kdja",
+        "id" : 10
+}
+> db.mensajes.find().pretty()
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cec"),
+        "user" : "fer@gmail.com",
+        "time" : "05/03/2022 6:36:42 PM",
+        "message" : "Hola"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552ced"),
+        "user" : "fer@gmail.com",
+        "time" : "05/03/2022 6:36:44 PM",
+        "message" : "Como va?"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cee"),
+        "user" : "fer@gmail.com",
+        "time" : "05/03/2022 6:36:50 PM",
+        "message" : "Todo bien?"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cef"),
+        "user" : "nofer@gmail.com",
+        "time" : "05/03/2022 6:36:58 PM",
+        "message" : "Todo bien"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cf0"),
+        "user" : "nofer@gmail.com",
+        "time" : "05/03/2022 6:37:01 PM",
+        "message" : "Y vos?"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cf1"),
+        "user" : "nofer@gmail.com",
+        "time" : "05/03/2022 6:37:11 PM",
+        "message" : "Desafio de coder"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cf2"),
+        "user" : "tampocofer@gmail.com",
+        "time" : "05/03/2022 6:37:26 PM",
+        "message" : "mongodb"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cf3"),
+        "user" : "tampocofer@gmail.com",
+        "time" : "05/03/2022 6:37:34 PM",
+        "message" : "bases"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cf4"),
+        "user" : "tampocofer@gmail.com",
+        "time" : "05/03/2022 6:37:35 PM",
+        "message" : "de"
+}
+{
+        "_id" : ObjectId("6271a0bd0e3e6ad854552cf5"),
+        "user" : "tampocofer@gmail.com",
+        "time" : "05/03/2022 6:37:37 PM",
+        "message" : "datos"
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+4) Mostrar la cantidad de documentos almacenados en cada una de ellas.
+
+> db.productos.find().count()
+10
+> db.mensajes.find().count()
+10
+
+--------------------------------------------------------------------------------------------------------------------------------
+5) Realizar un CRUD sobre la colección de productos:
+ a) Agregar un producto más en la colección de productos
+
+> db.productos.insert({title: "Fanta", price: 300, thumbnail: "abc"})
+WriteResult({ "nInserted" : 1 })
+
+--------------------------------------------------------------------------------------------------------------------------------
+ b) Realizar una consulta por nombre de producto específico:
+  i) Listar los productos con precio menor a 1000 pesos.
+
+> db.productos.find({price: {$lt: 1000}}).pretty()
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf8"),
+        "title" : "Coca",
+        "price" : 200,
+        "thumbnail" : "saas",
+        "id" : 2
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfc"),
+        "title" : "Sprite",
+        "price" : 500,
+        "thumbnail" : "saasas",
+        "id" : 6
+}
+{
+        "_id" : ObjectId("6271a30c0e3e6ad854552d01"),
+        "title" : "Fanta",
+        "price" : 300,
+        "thumbnail" : "abc"
+}
+  
+--------------------------------------------------------------------------------------------------------------------------------
+  ii) Listar los productos con precio entre los 1000 a 3000 pesos.
+
+> db.productos.find({price: {$gt: 1000, $lt: 3000}}).pretty()
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf9"),
+        "title" : "Sushi",
+        "price" : 2000,
+        "thumbnail" : "sdas",
+        "id" : 3
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfb"),
+        "title" : "Hamburguesa",
+        "price" : 1500,
+        "thumbnail" : "saas",
+        "id" : 5
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfd"),
+        "title" : "Sanguche",
+        "price" : 1700,
+        "thumbnail" : "assa",
+        "id" : 7
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfe"),
+        "title" : "Helado",
+        "price" : 2500,
+        "thumbnail" : "dslsd",
+        "id" : 8
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+  iii) Listar los productos con precio mayor a 3000 pesos.
+
+> db.productos.find({price: {$gt: 3000}}).pretty()
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf7"),
+        "title" : "Asado",
+        "price" : 5000,
+        "thumbnail" : "asad",
+        "id" : 1
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+  iv) Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+
+> db.productos.find({}, {title: 1}).sort({price: 1}).skip(2).limit(1)
+{ "_id" : ObjectId("6271a2c60e3e6ad854552cfc"), "title" : "Sprite" }
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+ c) Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+
+> db.productos.updateMany({}, {$set: {stock: 100}})
+{ "acknowledged" : true, "matchedCount" : 11, "modifiedCount" : 11 }
+
+--------------------------------------------------------------------------------------------------------------------------------
+ d) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos. 
+
+> db.productos.update({price: {$gt: 4000}}, {$set: {stock: 0}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+--------------------------------------------------------------------------------------------------------------------------------
+ e) Borrar los productos con precio menor a 1000 pesos.
+
+> db.productos.deleteMany({price: {$lt: 1000}})
+{ "acknowledged" : true, "deletedCount" : 3 }
+
+--------------------------------------------------------------------------------------------------------------------------------
+6) Crear un usuario 'pepe' clave: 'asd456' que sólo pueda leer la base de datos ecommerce. Verificar que pepe no pueda cambiar la información.
+
+> use admin
+switched to db admin
+> db.createUser({
+... user: "pepe",
+... pwd: "asd456",
+... roles: [{role: "read", db: "ecommerce"}]
+... })
+Successfully added user: {
+        "user" : "pepe",
+        "roles" : [
+                {
+                        "role" : "read",
+                        "db" : "ecommerce"
+                }
+        ]
+}
+
+---------------------------
+mongod --dbpath C:\Users\Fernando\OneDrive\Escritorio\miBD --auth
+---------------------------
+
+C:\Users\Fernando>mongo -u "pepe" -p "asd456"
+MongoDB shell version v5.0.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("09ad842b-2428-47c3-8753-4bd9cca6a9e7") }
+MongoDB server version: 5.0.8
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+> use ecommerce
+switched to db ecommerce
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf7"),
+        "title" : "Asado",
+        "price" : 5000,
+        "thumbnail" : "asad",
+        "id" : 1,
+        "stock" : 0
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cf9"),
+        "title" : "Sushi",
+        "price" : 2000,
+        "thumbnail" : "sdas",
+        "id" : 3,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfa"),
+        "title" : "Pancho",
+        "price" : 1000,
+        "thumbnail" : "asas",
+        "id" : 4,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfb"),
+        "title" : "Hamburguesa",
+        "price" : 1500,
+        "thumbnail" : "saas",
+        "id" : 5,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfd"),
+        "title" : "Sanguche",
+        "price" : 1700,
+        "thumbnail" : "assa",
+        "id" : 7,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cfe"),
+        "title" : "Helado",
+        "price" : 2500,
+        "thumbnail" : "dslsd",
+        "id" : 8,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552cff"),
+        "title" : "Nutella",
+        "price" : 3000,
+        "thumbnail" : "koasoi",
+        "id" : 9,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("6271a2c60e3e6ad854552d00"),
+        "title" : "Brownie",
+        "price" : 1000,
+        "thumbnail" : "kdja",
+        "id" : 10,
+        "stock" : 100
+}
+{
+> db.productos.insert({title: "algo", price: 1000, thumbnail: "asd"})
+WriteCommandError({
+        "ok" : 0,
+        "errmsg" : "not authorized on ecommerce to execute command { insert: \"productos\", ordered: true, lsid: { id: UUID(\"09ad842b-2428-47c3-8753-4bd9cca6a9e7\") }, $db: \"ecommerce\" }",
+        "code" : 13,
+        "codeName" : "Unauthorized"
+})
+

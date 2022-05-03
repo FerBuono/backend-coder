@@ -7,11 +7,11 @@ const Messages = require('./controllers/messages');
 const Container = require('./controllers/products');
 
 // APIs
-const products = new Container('./06-desafio-websockets/db/products.txt');
-const messages = new Messages('./06-desafio-websockets/db/messages.txt')
+const products = new Container('./db/products.txt');
+const messages = new Messages('./db/messages.txt')
 
 // Directorio público
-app.use(express.static('./06-desafio-websockets/public'));
+app.use(express.static('public'));
 
 // Lectura y parseo del body
 app.use(express.json());
